@@ -29,3 +29,36 @@ pip install feedparser python-dateutil
 ## Output
 
 The output file (news_{current_datetime}.md) includes new entries grouped by categories. Each entry includes the title, URL, date, and a cleaned description.
+
+Output sample : 
+```
+Total New Entries: 15    
+Current Date and Time: 2024-04-01 07:50:31
+
+## MASHABLE
+
+***
+
+How to watch the 2024 Japanese Grand Prix online for free
+URL: https://mashable.com/uk/deals/japan-gp-f1-live-stream-for-free
+Date: 2024-04-01 04:00:00
+Description: Watch the 2024 Japanese Grand Prix for free from anywhere in the world.
+
+***
+
+Wordle today: Here's the answer and hints for April 1
+URL: https://mashable.com/article/wordle-today-answer-april-1-2024
+Date: 2024-04-01 02:00:00
+Description: Here's the answer for "Wordle" #1017 on April 1, as well as a few hints, tips, and clues to help you solve it yourself.
+
+## ZDNet
+
+***
+
+Buy Microsoft Visual Studio Pro for just $40 right now
+URL: https://www.zdnet.com/article/buy-microsoft-visual-studio-pro-for-just-40-right-now/#ftag=RSSbaffb68
+Date: 2024-03-31 19:00:23
+Description: Code faster and work smarter with a license to Microsoft Visual Studio Professional 2022, available at a big discount now.
+
+[...]
+```
