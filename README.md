@@ -1,3 +1,7 @@
+<p align="center">
+<a href = "https://github.com/25gabriel-cmyk/RSSFeedHarvest" > <img src = "https://github.com/25gabriel-cmyk/RSSFeedHarvest/assets/134001939/386ae276-b801-4e86-b513-7352be3147ad" alt = "tgcf logo"  width=480> </a>
+</p>
+
 # RSS Feed Harvest
 Basically, this is a Python script that parse news feeds listed in a specific file called "news_feeds.md" and saves the new stuff it finds into a MarkDown file (news_{current_datetime}.md) at the desktop
 
