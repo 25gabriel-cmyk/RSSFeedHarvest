@@ -8,6 +8,7 @@ from dateutil import parser
 import re
 import html
 import requests
+import logging
 
 # Function to read RSS feeds from a file
 def read_rss_feeds_from_file(file_path):
@@ -244,6 +245,27 @@ with open("news_feeds.md", "r") as file:
 
 # Initialize counters and lists for unresponsive feeds and their reasons
 total_feeds = len(rss_feeds)
+
+# Configure logging
+logging.basicConfig(filename='rss_parser.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s: %(message)s')
+
+# Function to log errors
+def log_error(feed_url, error):
+    logging.error(f"Error parsing {feed_url}: {error}")
+
+# Inside the main loop where feed parsing occurs
+try:
+    feed = feedparser.parse(rss_feed)
+    status_code = feed.status
+
+    if 400 <= status_code < 600:
+        log_error(rss_feed, f"HTTP status code {status_code}")
+    else:
+        # Feed parsing was successful or is a redirection (3xx), continue processing entries
+        for entry in feed.entries:
+            # Parsing and processing entries
+except Exception as e:
+    log_error(rss_feed, e)
 
 # Prompt the user with the number of feeds checked
 print(f"\n[{total_feeds}] feeds checked.")
